@@ -1,0 +1,26 @@
+CREATE TABLE prescriber_rx (
+		npi								STRING, 
+		nppes_provider_last_org_name	STRING, 
+		nppes_provider_first_name		STRING, 
+		nppes_provider_state			STRING, 
+		nppes_provider_city			STRING, 
+		specialty_description			STRING, 
+		description_flag				STRING, 
+		drug_name		 		 		STRING, 
+		generic_name					STRING, 
+		bene_count						   STRING, 
+		total_claim_count				   STRING, 
+		total_30_day_fill_count			   STRING, 
+		total_day_supply				   STRING, 
+		total_drug_cost					   STRING, 
+		bene_count_ge65					   STRING, 
+		bene_count_ge65_suppress_flag	STRING, 
+		total_claim_count_ge65			   STRING, 
+		ge65_suppress_flag				STRING, 
+		total_30_day_fill_count_ge65	   STRING, 
+		total_day_supply_ge65			   STRING, 
+		total_drug_cost_ge65			   STRING )
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
